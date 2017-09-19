@@ -1,4 +1,4 @@
-document.write("test");
+/*document.write("test");
 //Tworzenie tablicy za pomoca literału tablicy, TU MASZ NAWIAS TRÓJKĄTNY
 var kolory = ['biały','zielony','czerwony'];
 //odwoływanie się do kolory "el"
@@ -63,7 +63,26 @@ var sortujCyfryPrawidlowo = cyfry.sort(function(a,b){
 console.log(sortujCyfryPrawidlowo);
 
 //ZADANIE DOMOWE
-Utwórz formularz z loginem (text) i hasłem (password). Zapisz dane w talicy, zapisz wymik w nagłówku (h2) użytkownik podaje również kolor w jakim ma być wszystko wyświetlone
+Utwórz formularz z loginem (text) i hasłem (password) Zapisz dane w talicy, zapisz wymik w nagłówku (h2) użytkownik podaje również kolor w jakim ma być wszystko wyświetlone
+*/
+
+
+var zadaniev1 = prompt("Podaj text");
+var cosv1 = document.getElementById("zadanie1");
+cosv1.innerHTML = zadaniev1;
+
+var zadaniev2 = prompt("Podaj password");
+var cosv1 = document.getElementById("zadanie2");
+cosv1.innerHTML = zadaniev2;
+
+var tablica = new Array('text','password');
+console.log(tablica);
+
+
+
+
+
+
 
 
 

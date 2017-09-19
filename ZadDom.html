@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Formularz</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" name="login" id="login" placeholder="login">
+        <input type="password" name="haslo" id="haslo" placeholder="hasło">
+    </form>
+    <button onclick="show();">wyswietl</button>
+    <h2 id="a"></h2>
+
+    <script>
+        function show() {
+            var login = document.getElementById("login").value;
+            var haslo = document.getElementById("haslo").value;
+            var tab = [login,haslo];
+            document.getElementById("a").textContent = "Twoj login to: " + tab[0] + " a hasło to" + tab[1];
+            }
+    </script>
+</body>
+
+</html>
