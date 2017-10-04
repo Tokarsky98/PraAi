@@ -63,8 +63,9 @@ var sortujCyfryPrawidlowo = cyfry.sort(function(a,b){
 console.log(sortujCyfryPrawidlowo);
 
 //ZADANIE DOMOWE
-Utwórz formularz z loginem (text) i hasłem (password) Zapisz dane w talicy, zapisz wymik w nagłówku (h2) użytkownik podaje również kolor w jakim ma być wszystko wyświetlone
-*/
+Utwórz formularz z loginem (text) i hasłem (password) Zapisz dane w talicy, zapisz wymik w nagłówku (h2) użytkownik podaje również kolor w jakim ma być wszystko wyświetlone*/
+
+
 
 
 var zadaniev1 = prompt("Podaj text");
@@ -77,6 +78,7 @@ cosv1.innerHTML = zadaniev2;
 
 var tablica = new Array('text','password');
 console.log(tablica);
+
 
 
 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Moja strona</title>
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+</head>
+
+<body>
+    <h2 id="a"></h2>
+   <script type="text/javascript">
+
+var tablica = new Array(1, 2, 3);
+
+document.write("Zawartość tablicy przed wykonaniem metody pop: <br />");
+
+for(indeks in tablica){
+
+  document.write(tablica[indeks] + " ");
+
+}
+
+var element = tablica.pop();
+
+document.write("<br />Zawartość tablicy po wykonaniu metody pop: <br />");
+
+for(indeks in tablica){
+
+  document.write(tablica[indeks] + " ");
+
+}
+
+</script>
+
+</body>
+
+</html>
