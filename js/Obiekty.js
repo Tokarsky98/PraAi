@@ -111,28 +111,104 @@ var HotelLech = new Hotel('Lech',100,30,true,false,['jednoosobowy','apartament']
 
 document.write(HotelLech.wyswietl());
 
-//Zadanie dom
-//Zmień metodę wyświetl z konstruktora hotel, zastosuj tablicę do wyświetlania wartości
+//***************************************************************
+/*function Osoba(imie,nazwisko,wiek,plec){
+    this.imie = imie;
+    this.nazwisko = nazwisko;
+    this.wiek = wiek;
+    this.plec = plec;
+}
+
+var czarek = new osoba('Czarek','Kowal',19,'M');
+document.write(czarek.imie);*/
+
+//UTWORZ KONSTRUKTOR O NAZWIEK PIES,IMIE,RASA,WAGA ORAZ ULUBIONE ZAJĘCIA, W ULUBIONYCH ZAJECIACH MOŻE BYĆ WIELE WARTOŚCI, UTWÓRZ 3 OBIEKTY O NAZWACH AZOR EDI SABA.
 
 
+function pies(imie,rasa,waga,ulubioneZajecia){
+    this.imie = imie;
+    this.rasa = rasa;
+    this.waga = waga;
+    this.ulubioneZajecia = ulubioneZajecia;
+}
+
+var azor = new pies('Azor','Owczarek Niemiecki',30,['jedzenie','spanie']);
+var edi = new pies('Edi','Sznaucer',20,['jedzenie','lezenie']);
+var saba = new pies('Saba','Jamnik',10,['spanie','jedzenie']);
+
+document.write(edi.ulubioneZajecia); //tak dla przykładu co wyciągam z niego
+
+var psy = [azor,edi,saba];
+
+edi.ulubioneZajecia.push('spacer'); // dodaję spacer do ulubionych zajęć ediego
+
+var rozmiar = 'Mały pies';
+
+for (var i=0;i<psy.length;i++){
+    if(psy[i].waga<10){
+        psy[i].rozmiar = ' duży pies';
+    }else{
+        psy[i].rozmiar = ' mały pies';
+    }
+    document.write('<br>'+'Pies: ' + '<span style="color:blue">'+ psy[i].imie + '</span>' + psy[i].rozmiar + '<br>');
+}
+
+/*var tab = ['jan','nowak','Poznań'];
+for (var i in tab){
+    //document.write(i); // indeksy 012
+    document.write(i+ "-"+tab[i]+'<br>');
+}
+
+for (var x in edi){
+    if(x=='imie' || x=='rasa'){
+        document.write(edi[x]);
+    }
+}*/
+
+function Pole(a,b){
+    return a*b;
+}
+console.log(Pole.length); //2 BŁAGAM, ile parametrów ma konstruktor pole
+
+console.log(Pole.constructor); // czy utworzyliśmy konstruktor pole, utworzony za pomocą funkcji
+
+console.log(Pole.prototype); // jest nim object
+
+//**********************************************************
+
+function Uczen(imie,nazwisko){
+    this.imie = imie;
+    this.nazwisko = nazwisko;
+}
+
+var janusz = new Uczen('Maciej','Nowak');
+Uczen.prototype.narodowosc = 'polska';
+Uczen.prototype.wyswietl = function() {
+    return "imie: " +this.imie +',nazwisko'+this.nazwisko+',narodowość:'+this.narodowosc;
+
+}
+document.write(janusz.wyswietl());
+document.write(janusz.constructor.prototype.narodowosc);// zwraca wartość dla prototypu narodowosc
+
+//************************************************************
+
+/*Utwórz konstruktor rower, który ma dwa parametry: nazwa oraz kolor. Utwórz prototyp ilosckol, który ma wartość 2. Utwórz metodę wyświetlającą wszystkie dane za pomocą for in prototyp wyświetlający wszystkie dane za pomocą for in.*/
 
 
+function rower(nazwa,kolor){
+    this.nazwa = nazwa;
+    this.kolor = kolor;
+}
+
+var cos = new rower('Składak','Czerwony');
+rower.prototype.ilosckol = 2;
+rower.prototype.wyswietl = function(){
+    return "nazwa: " + this.nazwa + " ,ilość kół: "  + this.ilosckol + " ,kolor: " + this.kolor;
+
+}
+document.write(cos.wyswietl()); //nie wiem XD
 
 
+console.log(janusz.hasOwnProperty('narodowość1')); //sprawdzimy czy ta metoda jest w tym obiekcie
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if (typeof(this[i]!='function'));
